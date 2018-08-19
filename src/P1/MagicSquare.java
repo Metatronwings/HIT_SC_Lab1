@@ -18,6 +18,8 @@ public class MagicSquare {
         System.out.println(generateMagicSquare(-4));
         System.out.println(generateMagicSquare(3));
         System.out.println(generateMagicSquare(5));
+
+        System.out.println(isLegalMagicSquare("6.txt"));
     }
 
     private static boolean isLegalMagicSquare(String fileName) {
