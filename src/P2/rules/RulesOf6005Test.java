@@ -3,23 +3,24 @@
  */
 package P2.rules;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * JUnit tests for RulesOf6005.
  */
-public class RulesOf6005Test {
+class RulesOf6005Test {
     
     /**
      * Tests the mayUseCodeInAssignment method.
      */
     @Test
-    public void testMayUseCodeInAssignment() {
-        assertFalse("Expected false: un-cited publicly-available code",
-                RulesOf6005.mayUseCodeInAssignment(false, true, false, false, false));
-        assertTrue("Expected true: self-written required code",
-                RulesOf6005.mayUseCodeInAssignment(true, false, true, true, true));
+    void testMayUseCodeInAssignment() {
+        assertFalse(RulesOf6005.mayUseCodeInAssignment(false, true, false, false, false),
+                "Expected false: un-cited publicly-available code");
+        assertTrue(RulesOf6005.mayUseCodeInAssignment(true, false, true, true, true),
+                "Expected true: self-written required code");
     }
 }
